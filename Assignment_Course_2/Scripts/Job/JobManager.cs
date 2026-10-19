@@ -92,21 +92,6 @@ namespace Assignment_Course_2.Scripts.Job
             //Print Add Application Menu!
             Print.ListToTextBoxes(new List<string> { "<:Add Application:> ", $"(You got {Applications.Count()} applications)", "<=:Base Info:=> " }, '-','|',2,Program_Values.TitleLength - 1);
 
-            //Newer code ^ Version 3
-            //Older code v Version 2
-
-            //Print.CreateLine(Print.Text.Write, '-', 92);
-            //Console.Write("\n");
-            //Console.Write("|");
-            //Print.CreateTextLine("<:Add Application:>", 45);
-            //Console.Write("|");
-            //Print.CreateTextLine($"(You got {Applications.Count()} applications)", 45);
-            //Console.Write("|");
-            //Console.Write("\n");
-            //Print.CreateLine(Print.Text.Write, '-', 92);
-            //Print.CreateTextWindow("<=:Base Info:=>", '-', 47);
-
-
             //Ask for Company Name!
             User.WriteAndReadInput(Print.Variable.String, "Company Name");
             JobApp.CompanyName = User.Input;//Add Company Name to Application!
@@ -187,6 +172,7 @@ namespace Assignment_Course_2.Scripts.Job
 
             //Set the JobApplication Status!
             Print.CreateTextWindow("<=:Job Application Status:=>", '-', Program_Values.LineLenght);  //Create Function Window!
+
             List<string> StatusOptions = new List<string>()                 //List of Commands for Application Status!
             {
                 "(Applied)",
@@ -198,6 +184,12 @@ namespace Assignment_Course_2.Scripts.Job
             Print.CreateLine(Print.Text.WriteLine, '.', 45);
             Console.Write("\n");
             Print.AskQuestionAndReadInput(Print.Variable.String, "Input");
+
+            while (User.Input.ToLower() != "applied" && User.Input.ToLower() != "1" && User.Input.ToLower() != "interview" && User.Input.ToLower() != "2" && User.Input.ToLower() != "offer" && User.Input.ToLower() != "3" && User.Input.ToLower() != "rejected" && User.Input.ToLower() != "4")
+            {
+                Print.ErrorCode("Invalid Input!");
+                Print.AskQuestionAndReadInput(Print.Variable.String, "Input");
+            }
 
             switch (User.Input.ToLower())
             {
