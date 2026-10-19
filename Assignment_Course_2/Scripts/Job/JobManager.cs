@@ -104,7 +104,6 @@ namespace Assignment_Course_2.Scripts.Job
             //Console.Write("|");
             //Console.Write("\n");
             //Print.CreateLine(Print.Text.Write, '-', 92);
-
             //Print.CreateTextWindow("<=:Base Info:=>", '-', 47);
 
 

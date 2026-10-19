@@ -27,7 +27,7 @@ namespace Assignment_Course_2
                 "5.(Show Statistics)",
                 "6.(Update Application Status)",
                 "7.(Remove Application)",
-                "8.(Exit Program)"
+                "8.(Exit Program)",
 
             };
 
