@@ -319,22 +319,26 @@ namespace Assignment_Course_2.Scripts.Job
             //If application/ applications exist in Applications!
             else
             {
-
+                //Place Holder! WriteLine (ESC)!
                 Console.WriteLine("(Esc)");
 
                 //Print the Job Applications name so the user can see them!
                 User.int_Input = 0;
                 foreach (var application in Applications)
                 {
+                    //Write Company Name!
                     Console.Write($"({application.CompanyName})   ");
                     User.int_Input++;
-                    if (User.int_Input >= 4)
+
+                    //If User Int is greater then 3, create new line!
+                    if (User.int_Input > 3)
                     {
                         Console.Write("\n");
                         User.int_Input = 0;
                     }
 
                 }
+                //Print Line!
                 Print.CreateLine(Print.Text.WriteLine, ':', 47);
                 Console.WriteLine("");
                 User.int_Input = 0;
@@ -353,11 +357,14 @@ namespace Assignment_Course_2.Scripts.Job
 
                     default:
 
+                        //
                         if (Applications.Exists(application => application.CompanyName.ToLower() == User.Input.ToLower()))
                         {
 
+                            //
                             var AppIndex = Applications.FindIndex(application => application.CompanyName.ToLower() == User.Input.ToLower());
 
+                            //
                             Print.CreateTextWindow("<=:What is the new status?:=>", '-', 47);
                             Console.Write("|");
                             Print.ListToTextLine(new List<string>{"1.(Applied)  ","2.(Interviewed) " }, 45);
@@ -365,10 +372,9 @@ namespace Assignment_Course_2.Scripts.Job
                             Print.ListToTextLine(new List<string> { "3.(Offered) ", "4.(Rejected) " }, 46);
                             Console.Write("|\n");
                             Print.CreateLine(Print.Text.WriteLine, '-', 47);
-                            //Console.WriteLine("1.(Applied)   2.(Interviewed)   3.(Offered)   4.(Rejected)   ");
                             User.WriteAndReadInput(Print.Variable.String, "Input");
 
-
+                            //
                             switch (User.Input.ToLower())
                             {
 
@@ -401,9 +407,12 @@ namespace Assignment_Course_2.Scripts.Job
 
                             }
 
+                            //
                             Console.WriteLine("Status has been updated!");
                             Console.ReadKey();
                         }
+
+                        //
                         else
                         {
                             Console.WriteLine("Name NOT found!");
@@ -633,7 +642,7 @@ namespace Assignment_Course_2.Scripts.Job
             //
             User.WriteAndReadInput(Print.Variable.String, "Input");
 
-
+            //
             switch (User.Input.ToLower())
             {
                 //
@@ -655,7 +664,6 @@ namespace Assignment_Course_2.Scripts.Job
                             Console.WriteLine("Application list is now clean! \nAll applications have been Removed!");
                             break;
 
-
                         //
                         case "no":
                             Console.WriteLine("Canceling Removel of All Applications!");
@@ -663,10 +671,7 @@ namespace Assignment_Course_2.Scripts.Job
 
                     }
 
-
                     break;//
-
-
 
                 //
                 case "rejected":
@@ -694,10 +699,7 @@ namespace Assignment_Course_2.Scripts.Job
 
                     }
 
-
                     break;//
-
-
 
                 //Set how many days old a application can be. If the application is older then X days ago, remove them from Applications list!
                 case "older then x days":
@@ -712,14 +714,10 @@ namespace Assignment_Course_2.Scripts.Job
 
                     break;//
 
-
-
                 //
                 case "esc":
                     Console.WriteLine("Going back to Main Menu!");
                     return;
-
-
 
                 //If non of the main Commands, check if User.Input == Application.CompanyName. If not tell the User that they typed a invalied command!
                 default:
@@ -750,7 +748,6 @@ namespace Assignment_Course_2.Scripts.Job
                             case "no":
                                 Console.WriteLine($"Canceling Removel of {SelectedApplication}!");
                                 break;
-
                         }
 
                     }
@@ -763,7 +760,6 @@ namespace Assignment_Course_2.Scripts.Job
 
                     }
                     break;//
-
 
             }
 
