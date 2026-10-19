@@ -10,7 +10,7 @@ namespace Assignment_Course_2.Scripts.Text_Dictionary
         //User Values!
         public static string Input;                                              //string value. Type User.Input to access it!
         public static int int_Input;                                             //int value. Type User.int_Input to access it!
-        
+        static string RepQuestion = "";
         
 
 
@@ -20,7 +20,9 @@ namespace Assignment_Course_2.Scripts.Text_Dictionary
             Input = Console.ReadLine();                                          //Read what User entered and set it as User Input!
             while(Input.IsWhiteSpace())                                          //While User Input is empty or only space!
             {
+                //Print.InvalidCommandBig();
                 Console.WriteLine("Empty Input! Type something!");               //Tell that the User has entered a empty Input and that they need to try again!
+                Console.Write($"{RepQuestion}: ");
                 Input = Console.ReadLine();                                      //Read what User entered and set it as User Input!
             }
 
@@ -71,16 +73,19 @@ namespace Assignment_Course_2.Scripts.Text_Dictionary
                 default:
                     Console.Write($"{Question}: ");
                     ReadInput();
+                    //RepQuestion = Question;
                     break;
 
                 case Print.Variable.String:
                     Console.Write($"{Question}: ");
                     ReadInput();
+                    //RepQuestion = Question;
                     break;
 
                 case Print.Variable.Int:
                     Console.Write($"{Question}: ");
                     ReadInput_int();
+                    //RepQuestion = Question;
                     break;
 
             }

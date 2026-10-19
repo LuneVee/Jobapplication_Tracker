@@ -48,7 +48,7 @@ namespace Assignment_Course_2
 
 
                 //Ask for user input!
-                User.WriteAndReadInput(Print.Variable.String, "Input: ");
+                User.WriteAndReadInput(Print.Variable.String, "Input");
 
 
                 //Respond based on User Input!
@@ -66,7 +66,7 @@ namespace Assignment_Course_2
                     case "1":
                         Console.Clear();
                         Print.CreateTitle(": Assignment :", '=', Program_Values.TitleLength);//Create Title!
-                        JobManager.AddJobApplication();
+                        JobManager.AddJobApplication();                                      //Create and add a Application to Applications list!
                         Console.Clear();
                         break;
 
@@ -75,7 +75,7 @@ namespace Assignment_Course_2
                     case "2":
                         Console.Clear();
                         Print.CreateTitle(": Assignment :", '=', Program_Values.TitleLength);//Create Title!
-                        JobManager.ShowApplications();
+                        JobManager.ShowApplications();                                       //Show Applications!
                         Console.Clear();
                         break;
 
@@ -84,7 +84,7 @@ namespace Assignment_Course_2
                     case "3":
                         Console.Clear();
                         Print.CreateTitle(": Assignment :", '=', Program_Values.TitleLength);//Create Title!
-                        JobManager.ShowApplicationsByStatus();
+                        JobManager.ShowApplicationsByStatus();                               //Show Applications By Status!
                         Console.Clear();
 
                         break;
@@ -94,7 +94,7 @@ namespace Assignment_Course_2
                     case "4":
                         Console.Clear();
                         Print.CreateTitle(": Assignment :", '=', Program_Values.TitleLength);//Create Title!
-                        JobManager.ShowApplicationsByDate();
+                        JobManager.ShowApplicationsByDate();                                 //Show Applications By Date!
                         Console.Clear();
                         break;
 
@@ -103,7 +103,7 @@ namespace Assignment_Course_2
                     case "5":
                         Console.Clear();
                         Print.CreateTitle(": Assignment :", '=', Program_Values.TitleLength);//Create Title!
-                        JobManager.ShowStatistics();
+                        JobManager.ShowStatistics();                                         //Show Statistics
                         Console.Clear();
                         break;
 
@@ -112,7 +112,7 @@ namespace Assignment_Course_2
                     case "6":
                         Console.Clear();
                         Print.CreateTitle(": Assignment :", '=', Program_Values.TitleLength);//Create Title!
-                        JobManager.UpdateStatus();
+                        JobManager.UpdateStatus();                                           //UpdateStatus of a Application!
                         Console.Clear();
                         break;
 
@@ -121,7 +121,7 @@ namespace Assignment_Course_2
                     case "7":
                         Console.Clear();
                         Print.CreateTitle(": Assignment :", '=', Program_Values.TitleLength);//Create Title!
-                        JobManager.RemoveApplication();
+                        JobManager.RemoveApplication();                                      //Remove Application!
                         Console.Clear();
                         break;
 

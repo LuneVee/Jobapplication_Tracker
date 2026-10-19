@@ -130,8 +130,7 @@ namespace Assignment_Course_2.Scripts.Job
 
 
             //
-            Print.CreateTextWindow("<=:Date when applied:=>", '.', 47);
-            //JobApp.ApplicationDate = new DateTime(0000, 00, 00);
+            Print.CreateTextWindow("<=:Date when applied:=>", '-', 47);
 
             //
             User.int_Input = 0;
@@ -187,7 +186,7 @@ namespace Assignment_Course_2.Scripts.Job
             JobApp.ApplicationDate = JobApp.ApplicationDate.AddDays(User.int_Input - 1);
 
             //Set the JobApplication Status!
-            Print.CreateTextWindow("<=:Job Application Status:=>", '.', Program_Values.LineLenght);  //Create Function Window!
+            Print.CreateTextWindow("<=:Job Application Status:=>", '-', Program_Values.LineLenght);  //Create Function Window!
             List<string> StatusOptions = new List<string>()                 //List of Commands for Application Status!
             {
                 "(Applied)",
@@ -228,7 +227,7 @@ namespace Assignment_Course_2.Scripts.Job
             //If anything but Status == Applied, ask when they resived a response. If Applied, you have yeat resived a response!
             if (JobApp.Status != Application.ApplicationStatus.Applied)
             {
-                Print.CreateTextWindow("<=:When did you get a response?:=>", '.', 47);
+                Print.CreateTextWindow("<=:When did you get a response?:=>", '-', 47);
                 User.int_Input = 0;
                 User.WriteAndReadInput(Print.Variable.Int, "Year");
 
@@ -484,13 +483,15 @@ namespace Assignment_Course_2.Scripts.Job
             //If User.Input == Existing Application, print that Job Application!
             else if (Applications.Exists(application => application.CompanyName.ToLower() == User.Input.ToLower()))
             {
+
                 User.int_Input = Applications.FindIndex(application => application.CompanyName.ToLower() == User.Input.ToLower());
+                int Num = User.int_Input;
 
                 Console.Clear();
                 Print.CreateTitle(": Assignment :", '=', Program_Values.TitleLength);
                 Print.ListToTextBoxes(new List<string> { "<:Show Application:>", $"(You got {Applications.Count()} applications)", $"Application for {Applications[User.int_Input].CompanyName}" }, '-', '|', 2, Program_Values.TitleLength - 1);
 
-                Applications[User.int_Input].GetSummary();
+                Applications[Num].GetSummary();
                 Console.WriteLine("");
                 LoopMethod = false;
             }

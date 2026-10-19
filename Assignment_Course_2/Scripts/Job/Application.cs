@@ -65,7 +65,7 @@ namespace Assignment_Course_2.Scripts.Job
 
 
             //Console.WriteLine(ResponseDate);
-            Console.WriteLine($"Salary Expectation  :({SalaryExpectaion})");
+            Console.WriteLine($"Salary Expectation  :({SalaryExpectaion}) sek");
             Print.CreateLine(Print.Text.WriteLine, '-', Program_Values.LineLenght - 2);
 
         }
