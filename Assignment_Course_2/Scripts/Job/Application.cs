@@ -44,7 +44,7 @@ namespace Assignment_Course_2.Scripts.Job
             GetDaysSinceApplied();
 
             //Run DaysSinceApplied(); method!
-            Print.CreateLine(Print.Text.WriteLine, '-', Program_Values.LineLenght - 2);
+            //Print.CreateLine(Print.Text.WriteLine, '-', Program_Values.LineLenght - 2);
 
             //
             Console.WriteLine($"Company Name        :({CompanyName})");

@@ -319,8 +319,7 @@ namespace Assignment_Course_2.Scripts.Job
             //If application/ applications exist in Applications!
             else
             {
-                //Create Add Application Menu!
-                //Print.CreateTextWindow("<=:Application :=>", '-', 47);
+
                 Console.WriteLine("(Esc)");
 
                 //Print the Job Applications name so the user can see them!
@@ -336,7 +335,7 @@ namespace Assignment_Course_2.Scripts.Job
                     }
 
                 }
-                Print.CreateLine(Print.Text.WriteLine, '-', 47);
+                Print.CreateLine(Print.Text.WriteLine, ':', 47);
                 Console.WriteLine("");
                 User.int_Input = 0;
 
@@ -591,7 +590,7 @@ namespace Assignment_Course_2.Scripts.Job
             Print.ListToTextBoxes(new List<string> { "<:Remove Application:>", $"(You got {Applications.Count()} applications)", "<=:Applications:=>" }, '-', 'x', 2, Program_Values.TitleLength - 1);
 
             //Creating a Queue variable!
-            Queue<string> CommandsQueue = new Queue<string>(["All", "Rejected", "Older Then X Days"]);
+            Queue<string> CommandsQueue = new Queue<string>(["All", "Esc", "Rejected", "Older Then X Days"]);
 
             //Adding all Application Company Names to the Queue!
             foreach (var application in Applications)
@@ -712,6 +711,13 @@ namespace Assignment_Course_2.Scripts.Job
                     Console.WriteLine($"Allications older then {User.int_Input} has been Removed!");
 
                     break;//
+
+
+
+                //
+                case "esc":
+                    Console.WriteLine("Going back to Main Menu!");
+                    return;
 
 
 

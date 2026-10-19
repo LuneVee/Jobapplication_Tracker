@@ -180,7 +180,7 @@ namespace Assignment_Course_2.Scripts.Text_Dictionary
                 for (int i = 0; i < List.Count; i++)
                 {
 
-                    TextLength = TextLength + List[i].Count() + i + 1;
+                    TextLength = TextLength + List[i].Count();
 
                     if (TextLength < TextLineLenght)
                     {
